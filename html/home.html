@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Đọc sách Online | HBBook</title>
+	<link rel="stylesheet" href="../css/home.css">
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;531;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<hr/ color= "#fd8d6e" style="margin: 0px; border-top-width: 0px;padding-top: 4px">
+	<div class="top">
+		<div class="menu">
+			<div class="menu-logo">
+				<a href="home.html" class="logo-top">
+					<img src="../photo/logo/1-profile.png" alt="hbbook">
+				</a>
+			</div>
+			<div class="menu-main">
+				<div class="nuu">
+					<ul class="menu-item">
+						<li><a href="../html/home.html" style="font-weight: bold;">TRANG CHỦ</a></li>
+						<li><a href="../html/full_book.html" style="font-weight: bold;">THƯ VIỆN SÁCH</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="font-weight: bold;">THỂ LOẠI</a>
+							<ul class="dropdown-list dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#">Tiểu thuyết</a></li>
+								<li><a href="#">Văn học</a></li>
+								<li><a href="#">Tập truyện ngắn</a></li>
+								<li><a href="#">Hành động - Giật gân</a></li>
+								<li><a href="#">Sách thiếu nhi</a></li>
+								<li><a href="#">Tâm lý - Tình cảm</a></li>
+								<li><a href="#">Manga (Truyện tranh)</a></li>
+								<li><a href="#">Ngụ ngôn</a></li>
+								<li><a href="#">Viễn tưởng</a></li>                                    
+							</ul>  
+						</li>
+					</ul>
+				</div>
+				
+				<div class="search">
+					<input type="text" placeholder="Nhập tên sách" class="search-txt">
+					<a href="#" class="search-btn">
+						<img src="../photo/icon/search.png">
+					</a>
+				</div>
+
+				<div class="menu-tk">
+					<button type="button" class="btn-dnhap" data-toggle="modal" data-target="#exampleModalCenter">
+						TÀI KHOẢN
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="transition: 0.5s">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">TÀI KHOẢN</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+
+				<div class="modal-body">
+					<div class="box">
+						<div class="btn-box">
+							<div id="btn" style="width: 121px;"></div>
+							<button type="button" class="box-btn" onclick="dnhap()">Đăng nhập</button>
+							<button type="button" class="box-btn" onclick="dky()">Đăng ký</button>
+						</div>
+						<div class="social">
+							<img src="../login/facebook.png" alt="fb">
+							<img src="../login/google.png" alt="gg">							
+							<img src="../login/instagram.png" alt="ins">				
+						</div>
+						<form id="dnhap" class="form-box">
+							<input type="text" class="name" placeholder="Tên đăng nhập" required="">
+							<input type="password" class="name" placeholder="Mật khẩu" required="">
+							<input type="checkbox" class="check-box">
+							<span class="lg">Ghi nhớ đăng nhập</span>
+							<button type="submit" class="sub-btn">Đăng nhập</button>
+						</form>
+
+						<form id="dky" class="form-box">
+							<input type="text" class="name" placeholder="Tên đăng nhập" required="">
+							<input type="text" class="name" placeholder="Email" required="">
+							<input type="password" class="name" placeholder="Mật khẩu" required="">
+							<input type="checkbox" class="check-box">
+							<span class="lg">Tôi đồng ý với điều khoản</span>
+							<button type="submit" class="sub-btn">Đăng kí</button>
+						</form>
+					</div>
+					<script>
+						var x = document.getElementById("dnhap");
+						var y = document.getElementById("dky");
+						var z = document.getElementById("btn");
+
+						function dky(){
+							x.style.left = "-400px";
+							y.style.left = "50px";
+							z.style.left = "121px";
+						}
+						function dnhap(){
+							x.style.left = "50px";
+							y.style.left = "450px";
+							z.style.left = "0px";
+						}							
+					</script>
+				</div>					
+			</div>
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="poster">			
+			<div id="carouselExampleIndicators" class="carousel carousel-fade slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="width: 32px"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="../photo/poster/2-slide3.jpg" class="d-block w-100" alt="the witcher">
+					</div>
+					<div class="carousel-item">
+						<img src="../photo/poster/2-slide1.jpg" class="d-block w-100" alt="game of thrones">
+					</div>
+					<div class="carousel-item">
+						<img src="../photo/poster/2-slide2.jpg" class="d-block w-100" alt="harry potter">
+					</div>
+					<div class="carousel-item">
+						<img src="../photo/poster/2-slide4.jpg" class="d-block w-100" alt="attack on titan">
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="mid-right">
+			<section class="mid-right-title">
+				<h2>Sách nổi bật</h2>
+				<p>Những bộ sách có lượt xem nhiều nhất trong tuần</p>
+			</section>
+
+			<section class="mid-right-book">
+				<div class="book-trend-1">
+					<div class="sach">
+						<a href="book.html">
+							<img src="../photo/book/3-tw.jpg" alt="the witcher">
+							<h4>The Witcher</h4>
+						</a>
+						<p>Chương 7</p>
+						<span>Tác giả : Andrzej Sapkowski</span><br/>
+						<span class="thel">Tiểu thuyết</span>&ensp;<span class="thel">Viễn tưởng</span>
+					</div>
+					<div class="sach">
+						<a href="book.html">
+							<img src="../photo/book/3-hp.jpg" alt="harry potter">
+							<h4>Harry Potter</h4>                        
+						</a>
+						<p>Chương 17</p>
+						<span>Tác giả : J. K. Rowling</span><br/>
+						<span class="thel">Tiểu thuyết</span>&ensp;<span class="thel">Viễn tưởng</span>
+					</div>
+					<div class="sach">
+						<a href="book.html">
+							<img src="../photo/book/3-got1.jpg" alt="game of thrones">
+							<h4>Game of Thrones</h4>                        
+						</a>
+						<p>Chương 38</p>
+						<span>Tác giả : George R. R. Martin</span><br/>
+						<span class="thel">Tiểu thuyết</span>&ensp;<span class="thel">Viễn tưởng</span>
+					</div>
+					<div class="sach">
+						<a href="book.html">
+							<img src="../photo/book/3-aot.jpg" alt="attack on titan">
+							<h4>Attack on titan</h4>                        
+						</a>
+						<p>Chương 32</p>
+						<span>Tác giả : Isayama Hajime</span><br/>
+						<span class="thel">Manga</span>&ensp;<span class="thel">Viễn tưởng</span>
+					</div>
+				</div>
+				<div class="book-trend-2">
+					<div class="sach">
+						<a href="book.html">
+							<img src="../photo/book/3-ky.jpg" alt="kimetsu no yaiba">
+							<h4>Kimetsu no Yaiba</h4>                        
+						</a>
+						<p>Chương 205</p>
+						<span>Tác giả : Gotouge Koyoharu</span><br/>
+						<span class="thel">Manga</span>&ensp;<span class="thel">Viễn tưởng</span>
+					</div>
+					<div class="sach">
+						<a href="book.html">
+							<img src="../photo/book/3-cln.jpg" alt="chiếc lược ngà">
+							<h4>Chiếc lược ngà</h4>                        
+						</a>
+						<p>Chương 10</p>
+						<span>Tác giả : Nguyễn Quang Sáng</span><br/>
+						<span class="thel">truyện ngắn</span>&ensp;<span class="thel">Văn học</span>
+					</div>
+					<div class="sach">
+						<a href="book.html">
+							<img src="../photo/book/3-bg.jpg" alt="bố già">
+							<h4>Bố già</h4>                        
+						</a>
+						<p>Chương 32</p>
+						<span>Tác giả : Mario Puzo</span><br/>
+						<span class="thel">Hành động & Giật gân</span>
+					</div>
+					<div class="sach">
+						<a href="book.html">
+							<img src="../photo/book/3-tqdn.jpg" alt="tam quốc diễn nghĩa">
+							<h4>Tam quốc diễn nghĩa</h4>                        
+						</a>
+						<p>Chương 120</p>
+						<span>Tác giả : La Quán Trung</span><br/>
+						<span class="thel">Tiểu thuyết</span>&ensp;<span class="thel">Truyện tranh</span>
+					</div>
+				</div>
+				<div class="btn-plus"><a href="#">Xem thêm</a></div>
+			</section>			
+		</div>
+
+		<div class="bot">
+			<section class="bot-title">
+				<h2>Sách hay nên đọc</h2>
+				<p>Những bộ sách có ý nghĩa, nội dung hay</p>
+			</section>
+
+			<i class="fa fa-chevron-left bot-prev"></i>
+			<i class="fa fa-chevron-right bot-next"></i>
+
+			<section class="bot-book-good">
+				<div class="book-g">
+					<a href="book.html">
+						<img src="../photo/book/3-iaf.jpg" alt="a song of ice and fire">
+						<h4>A song of ice and fire</h4>                        
+					</a>
+					<p>George R. R. Martin</p>
+				</div>
+				<div class="book-g">
+					<a href="book.html">
+						<img src="../photo/book/3-aot32.jpg" alt="attack on titan">
+						<h4>Attack on titan</h4>                        
+					</a>
+					<p>Isayama Hajime</p>
+				</div>
+				<div class="book-g">
+					<a href="book.html">
+						<img src="../photo/book/3-bg.jpg" alt="bố già">
+						<h4>Bố già</h4>                        
+					</a>
+					<p>Mario Puzo</p>
+				</div>
+				<div class="book-g">
+					<a href="book.html">
+						<img src="../photo/book/3-cp.jpg" alt="chí phèo">
+						<h4>Chí Phèo</h4>                        
+					</a>
+					<p>Nam Cao</p>
+				</div>
+				<div class="book-g">
+					<a href="book.html">
+						<img src="../photo/book/3-ntlcc.jpg" alt="những tấm lòng cao cả">
+						<h4>Những tấm lòng cao cả</h4>                        
+					</a>
+					<p>Edmondo De Amicis</p>
+				</div>				
+			</section>
+		</div>
+
+		<script>
+			$(document).ready(function(){
+				$('.bot-book-good').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 2000,
+				nextArrow: $('.bot-next'),
+				prevArrow: $('.bot-prev'),
+				});
+			});
+		</script>
+
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+		<div class="full">
+			<section class="full-title">
+				<h2>Tất cả sách</h2>
+			</section>
+
+			<section class="full-book">
+					<div class="full-book-list">
+						<a href="book.html">
+						<img src="../photo/book/3-ntlcc.jpg" alt="những tấm lòng cao cả">
+						<div class="fullplay">
+							<div class="textplay">
+								<h6>Những tấm lòng cao cả</h6>
+								<p>Những tấm lòng cao cả hay Tâm hồn cao thượng là một cuốn tiểu thuyết trẻ em của nhà văn người Ý Edmondo De Amicis.</p>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="full-book-list">
+						<a href="book.html">
+						<img src="../photo/book/3-cln.jpg" alt="chiếc lược ngà">
+						<div class="fullplay">
+							<div class="textplay">
+								<h6>Chiếc lược ngà</h6>
+								<p>Lần đầu tiên, câu chuyện cảm động về tình cha con trong bối cảnh chiến tranh của một gia đình miền Tây Nam Bộ...</p>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="full-book-list">
+						<a href="book.html">
+						<img src="../photo/book/3-tqdn.jpg" alt="tam quốc diễn nghĩa">
+						<div class="fullplay">
+							<div class="textplay">
+								<h6>Tam quốc diễn nghĩa</h6>
+								<p>Nguyên tên là Tam quốc chí thông tục diễn nghĩa, là một tiểu thuyết lịch sử Trung Quốc được La Quán Trung viết vào thế kỷ 14 kể về thời kỳ hỗn loạn Tam Quốc.</p>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="full-book-list">
+						<a href="book.html">
+						<img src="../photo/book/3-tla.jpg" alt="tôi là ai - và nếu vậy thì bao nhiêu?">
+						<div class="fullplay">
+							<div class="textplay">
+								<h6>Tôi là ai - và nếu vậy thì bao nhiêu?</h6>
+								<p>Được cấu trúc bằng các chuỗi câu hỏi; cứ mỗi đáp án lại được dẫn dắt đến một câu hỏi khác và gợi ý một tính tương đối của mối liên hệ không thể tách rời giữa đạo đức với hạnh phúc.</p>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="full-book-list" style=" position: absolute; top: 390px;">
+						<a href="book.html">
+						<img src="../photo/book/3-aot.jpg" alt="attack on titan">
+						<div class="fullplay">
+							<div class="textplay">
+								<h6>Attack on Titan</h6>
+								<p>Truyện đặt bối cảnh trong một thế giới giả tưởng, nơi con người sống trong các lãnh thổ được bao quanh bởi ba bức tường khổng lồ, bảo vệ họ khỏi những kẻ khổng lồ ăn thịt người - được biết đến dưới cái tên Titans.</p>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="full-book-list" style="position: absolute; left: 275px; top: 420px;">
+						<a href="book.html">
+						<img src="../photo/book/3-iaf.jpg" alt="a song of Ice and fire">
+						<div class="fullplay">
+							<div class="textplay">
+								<h6>A Song of Ice and Fire</h6>
+								<p>Lấy bối cảnh ở các lục địa hư cấu Westeros và Essos. Câu chuyện được kể theo góc nhìn của nhiều nhân vật theo vế thứ ba.</p>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="full-book-list" style="position: absolute; left: 820px; top: 385px;">
+						<a href="book.html">
+						<img src="../photo/book/3-kgd.jpg" alt="Kimetsu no Yaiba">
+						<div class="fullplay">
+							<div class="textplay">
+								<h6>Không gia đình</h6>
+								<p>Tác phẩm phác họa nhiều nhân vật, dù quan trọng nhiều hay ít, đã giúp đỡ cậu bé Rémy trên hành trình của cậu cũng như trong cuộc sống của cậu, đặc biệt là đi tìm gia đình thật của cậu.</p>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="full-book-list" style="position: absolute; left: 555px; top: 380px;">
+						<a href="book.html">
+						<img src="../photo/book/3-ky.jpg" alt="Không gia đình">
+						<div class="fullplay">
+							<div class="textplay">
+								<h6>Kimetsu no Yaiba</h6>
+								<p>Câu chuyện kể về Kamado Tanjiro, một cậu bé trở thành thợ săn quỷ sau khi gia đình bị quỷ tàn sát và em gái Nezuko bị biến thành quỷ.</p>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="full-book-list" style=" position: absolute; top: 770px;">
+						<a href="book.html">
+						<img src="../photo/book/3-kg.jpg" alt="Kết giới">
+						<div class="fullplay">
+							<div class="textplay">
+								<h6>Kết giới</h6>
+								<p>Kết giới kể về những cuộc phiêu lưu của Helena - một chiến binh xinh đẹp, quả cảm; và Jade - người bạn thân của cô, một chàng trai mãi trong hình hài đứa trẻ 13 tuổi. Hai người bạn cùng được Dmitri - thủ lĩnh đội Vệ Nhân - nhận nuôi khi còn nhỏ...</p>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="full-book-list" style="position: absolute; left: 275px; top: 800px;">
+						<a href="book.html">
+						<img src="../photo/book/3-oly.jpg" alt="The Heroes of Olympus">
+						<div class="fullplay">
+							<div class="textplay">
+								<h6>The Heroes of Olympus</h6>
+								<p>Cuốn tiểu thuyết được kể lại ở ngôi thứ ba, xen kẽ giữa các quan điểm của Jason, Piper, Leo, Reyna và Nico, khiến đây là lần đầu tiên trong loạt truyện mà ai đó không phải là một trong bảy vị thần của lời tiên tri là nhân vật quan điểm.</p>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="full-book-list" style="position: absolute; left: 820px; top: 755px;">
+						<a href="book.html">
+						<img src="../photo/book/3-tk.jpg" alt="Truyện Kiều">
+						<div class="fullplay">
+							<div class="textplay">
+								<h6>Truyện Kiều</h6>
+								<p>Đây được xem là truyện thơ nổi tiếng nhất và xét vào hàng kinh điển trong văn học Việt Nam, tác phẩm được viết bằng chữ Nôm theo thể lục bát, gồm 3254 câu.</p>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="full-book-list" style="position: absolute; left: 555px; top: 760px;">
+						<a href="book.html">
+						<img src="../photo/book/3-cp.jpg" alt="Chí Phèo">
+						<div class="fullplay">
+							<div class="textplay">
+								<h6>Chí Phèo</h6>
+								<p>Chí Phèo là một tác phẩm xuất sắc, thể hiện một tấn bi kịch của một người nông dân nghèo bị tha hóa trong xã hội. Chí Phèo cũng là tên nhân vật chính của truyện.</p>
+							</div>
+						</div>
+						</a>
+					</div>
+				<button class="btn-xthem" style="font-weight: bold;">Xem thêm</button>		
+			</section>
+		</div>
+	</div>
+
+	<div class="sp">
+		<div class="sp-text">
+            <div class="sp-logo"><a href="#" class="logo-sup"><img src="../photo/logo/1-cover.png" alt="hbbook"></a></div>
+            <div class="sp-tittle">
+                <p>Đọc sách online, sách full, sách hay. Website luôn cập nhật những bộ sách mới thuộc các thể loại đặc sắc như tiểu thuyết, truyện ngắn, hay sách văn học một cách nhanh nhất.</p> 
+            </div>
+        </div>				
+	</div>
+
+	<a href="#" id="gotop"><i class="fa fa-arrow-up"></i></a>
+	<script>
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("gotop").style.display = "block";
+			} else {
+				document.getElementById("gotop").style.display = "none";
+			}
+		}
+		document.getElementById('gotop').addEventListener("click", function(){
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		});
+	</script>
+</body>
+
+</html>

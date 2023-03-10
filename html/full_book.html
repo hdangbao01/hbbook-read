@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Thư viện HBBook</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../css/full_book.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<hr/ color= "#fd8d6e" style="margin: 0px; border-top-width: 0px;padding-top: 4px">
+	<div class="top">
+		<div class="menu">
+			<div class="menu-logo">
+				<a href="home.html" class="logo-top">
+					<img src="../photo/logo/1-profile.png" alt="hbbook">
+				</a>
+			</div>
+
+			<div class="menu-main">
+				<div class="nuu">
+					<ul class="menu-item">
+						<li><a href="../html/home.html" style="font-weight: bold;">TRANG CHỦ</a></li>
+						<li><a href="../html/full_book.html" style="font-weight: bold;">THƯ VIỆN SÁCH</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="font-weight: bold;">THỂ LOẠI</a>
+							<ul class="dropdown-list dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#">Tiểu thuyết</a></li>
+								<li><a href="#">Văn học</a></li>
+								<li><a href="#">Tập truyện ngắn</a></li>
+								<li><a href="#">Hành động - Giật gân</a></li>
+								<li><a href="#">Sách thiếu nhi</a></li>
+								<li><a href="#">Tâm lý - Tình cảm</a></li>
+								<li><a href="#">Manga (Truyện tranh)</a></li>
+								<li><a href="#">Ngụ ngôn</a></li>
+								<li><a href="#">Viễn tưởng</a></li>                                    
+							</ul>  
+						</li>
+					</ul>
+				</div>
+
+				<div class="search">
+					<input type="text" placeholder="Nhập tên sách" class="search-txt">
+					<a href="#" class="search-btn">
+						<img src="../photo/icon/search.png">
+					</a>
+				</div>
+
+				<div class="menu-tk">
+					<button type="button" class="btn-dnhap" data-toggle="modal" data-target="#exampleModalCenter">
+						TÀI KHOẢN
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="transition: 0.5s">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">TÀI KHOẢN</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+
+				<div class="modal-body">
+					<div class="box">
+						<div class="btn-box">
+							<div id="btn" style="width: 121px;"></div>
+							<button type="button" class="box-btn" onclick="dnhap()">Đăng nhập</button>
+							<button type="button" class="box-btn" onclick="dky()">Đăng ký</button>
+						</div>
+						<div class="social">
+							<img src="../login/facebook.png" alt="fb">
+							<img src="../login/google.png" alt="gg">							
+							<img src="../login/instagram.png" alt="ins">				
+						</div>
+						<form id="dnhap" class="form-box">
+							<input type="text" class="name" placeholder="Tên đăng nhập" required="">
+							<input type="password" class="name" placeholder="Mật khẩu" required="">
+							<input type="checkbox" class="check-box">
+							<span class="lg">Ghi nhớ đăng nhập</span>
+							<button type="submit" class="sub-btn">Đăng nhập</button>
+						</form>
+
+						<form id="dky" class="form-box">
+							<input type="text" class="name" placeholder="Tên đăng nhập" required="">
+							<input type="text" class="name" placeholder="Email" required="">
+							<input type="password" class="name" placeholder="Mật khẩu" required="">
+							<input type="checkbox" class="check-box">
+							<span class="lg">Tôi đồng ý với điều khoản</span>
+							<button type="submit" class="sub-btn">Đăng kí</button>
+						</form>
+					</div>
+					<script>
+						var x = document.getElementById("dnhap");
+						var y = document.getElementById("dky");
+						var z = document.getElementById("btn");
+
+						function dky(){
+							x.style.left = "-400px";
+							y.style.left = "50px";
+							z.style.left = "121px";
+						}
+						function dnhap(){
+							x.style.left = "50px";
+							y.style.left = "450px";
+							z.style.left = "0px";
+						}							
+					</script>
+				</div>					
+			</div>
+		</div>
+	</div>
+	
+	<div class="main">
+		<div class="logo-full">
+			<div class="danhdau">
+				<img src="../photo/b.jpg">
+			</div>
+		</div>
+
+		<div class="new-full">
+			<div class="cha">
+				<div class="tieude">
+					<h1 class="new-tittle">SÁCH MỚI</h1>
+				</div>
+				<div class="chuyen">
+					<i class="fa fa-chevron-left new-prev"></i>
+					<i class="fa fa-chevron-right new-next"></i>
+				</div>
+			</div>
+
+			<div class="slide-new">
+				<div class="sach">
+					<a href="book.html">
+						<img src="../photo/book/3-ogvbc.jpg" alt="ông già và biển cả">
+						<h4>Ông già và biển cả</h4>                        
+					</a>
+					<p>Chương 127</p>
+				</div>
+				<div class="sach">
+					<a href="book.html">
+						<img src="../photo/book/3-op.jpg" alt="one piece">
+						<h4>One Piece</h4>                        
+					</a>
+					<p>Chương 983</p>
+				</div>
+				<div class="sach">
+					<a href="book.html">
+						<img src="../photo/book/3-t.jpg" alt="thor">
+						<h4>Thor</h4>                        
+					</a>
+					<p>Chương 1</p>
+				</div>
+				<div class="sach">
+					<a href="book.html">
+						<img src="../photo/book/3-hp2.jpg" alt="Harry Potter and the Cursed Child">
+						<h4>Harry Potter and the Cursed Child</h4>                        
+					</a>
+					<p>Chương 25</p>
+				</div>
+				<div class="sach">
+					<a href="book.html">
+						<img src="../photo/book/3-iaf.jpg" alt="a song of ice and fire">
+						<h4>A song of ice and fire</h4>                        
+					</a>
+					<p>Chương 50</p>
+				</div>
+				<div class="sach">
+					<a href="book.html">
+						<img src="../photo/book/3-drm.jpg" alt="doraemon">
+						<h4>Doraemon</h4>                        
+					</a>
+					<p>Chương 7</p>
+				</div>
+				<div class="sach">
+					<a href="book.html">
+						<img src="../photo/book/3-got2.jpg" alt="Fire & Blood">
+						<h4>Fire & Blood</h4>                        
+					</a>
+					<p>Chương 60</p>
+				</div>
+				<div class="sach">
+					<a href="book.html">
+						<img src="../photo/book/3-drcl.jpg" alt="dracul">
+						<h4>Dracul</h4>                        
+					</a>
+					<p>Chương 1</p>
+				</div>
+				<div class="sach">
+					<a href="book.html">
+						<img src="../photo/book/3-tn2.jpg" alt="truyện ngắn">
+						<h4>Truyện ngắn</h4>                        
+					</a>
+					<p>Chương 2</p>
+				</div>
+				<div class="sach">
+					<a href="book.html">
+						<img src="../photo/book/3-tnn.jpg" alt="truyện ngụ ngôn">
+						<h4>Truyện ngụ ngôn</h4>                        
+					</a>
+					<p>Chương 2</p>
+				</div>
+				<div class="sach">
+					<a href="book.html">
+						<img src="../photo/book/3-vn.jpg" alt="vợ nhặt">
+						<h4>Vợ nhăt</h4>                        
+					</a>
+					<p>Chương 1</p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$(document).ready(function(){				
+				$('.slide-new').slick({
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 2000,
+				nextArrow: $('.new-next'),
+				prevArrow: $('.new-prev'),
+				});
+			});
+		</script>
+
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+		<div class="abc">
+			<div class="list-full">
+				<div class="list-title">
+					<h2>Thư viện A-Z</h2>
+				</div>
+
+				<div class="list-sach">
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-aot.jpg" alt="attack on titan"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Attack on Titan</p></a>
+							<div class="tgian">
+								<p>2 phút trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 212</a>
+							<a href="#">Chap 211</a>
+							<a href="#">Chap 210</a>
+							<a href="#">Chap 209</a>
+							</div>							
+						</div>						
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-bg.jpg" alt="bố già"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Bố Già</p></a>
+							<div class="tgian">
+								<p>15 phút trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 121</a>
+							<a href="#">Chap 120</a>							
+							</div>						
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-cln.jpg" alt="chiếc lược ngà"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Chiếc lược ngà</p></a>
+							<div class="tgian">
+								<p>33 phút trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chương 10</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-cp.jpg" alt="chí phèo"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Chí Phèo</p></a>
+							<div class="tgian">
+								<p>34 phút trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chương 1</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-drcl.jpg" alt="dracul"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Dracul</p></a>
+							<div class="tgian">
+								<p>40 phút trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 56</a>
+							<a href="#">Chap 55</a>
+							<a href="#">Chap 54</a>
+							<a href="#">Chap 53</a>
+							<a href="#">Chap 52</a>
+							<a href="#">Chap 51</a>
+							<a href="#">Chap 50</a>
+							<a href="#">Chap 49</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-drm.jpg" alt="doraemon"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Doraemon</p></a>
+							<div class="tgian">
+								<p>44 phút trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 99</a>
+							<a href="#">Chap 98</a>
+							<a href="#">Chap 97</a>
+							<a href="#">Chap 96</a>
+							<a href="#">Chap 95</a>
+							<a href="#">Chap 94</a>
+							<a href="#">Chap 93</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-got1.jpg" alt="game of thrones"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Game of thrones</p></a>
+							<div class="tgian">
+								<p>45 phút trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chương 32</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-hp.jpg" alt="harry potter"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Harry Potter</p></a>
+							<div class="tgian">
+								<p>47 phút trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chương 17</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-kg.jpg" alt="kết giới"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Kết giới</p></a>
+							<div class="tgian">
+								<p>49 phút trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 47</a>
+							<a href="#">Chap 46</a>
+							<a href="#">Chap 45</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-kgd.jpg" alt="không gia đình"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Không gia đình</p></a>
+							<div class="tgian">
+								<p>50 phút trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 2</a>
+							<a href="#">Chap 1</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-ky.jpg" alt="kimetsu yaiba"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Kimetsu Yaiba</p></a>
+							<div class="tgian">
+								<p>55 phút trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 200</a>
+							<a href="#">Chap 199</a>
+							<a href="#">Chap 198</a>
+							<a href="#">Chap 197</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-ntlcc.jpg" alt="những tấm lòng cao cả"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Những tấm lòng cao cả</p></a>
+							<div class="tgian">
+								<p>1 giờ trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 2</a>
+							<a href="#">Chap 1</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-ogvbc.jpg" alt="ông già và biển cả"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Ông già và biển cả</p></a>
+							<div class="tgian">
+								<p>1 giờ trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 2</a>
+							<a href="#">Chap 1</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-op.jpg" alt="one piece"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>One Piece</p></a>
+							<div class="tgian">
+								<p>1 giờ trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 999</a>
+							<a href="#">Chap 998</a>
+							<a href="#">Chap 997</a>
+							<a href="#">Chap 996</a>
+							<a href="#">Chap 995</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-t.jpg" alt="thor"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Thor</p></a>
+							<div class="tgian">
+								<p>1 giờ trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 1</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-tk.jpg" alt="truyện kiều"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Truyện Kiều</p></a>
+							<div class="tgian">
+								<p>1 giờ trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chhương 1</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-tla.jpg" alt="tôi là ai? và nếu vậy thì row nhiêu?"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Tôi là ai? Và nếu vậy thì row nhiêu?</p></a>
+							<div class="tgian">
+								<p>1 giờ trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 2</a>
+							<a href="#">Chap 1</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-tqdn.jpg" alt="tam quốc diễn nghĩa"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Tam quốc diễn nghĩa</p></a>
+							<div class="tgian">
+								<p>1 giờ trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 150</a>
+							<a href="#">Chap 149</a>
+							<a href="#">Chap 148</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-tw.jpg" alt="the wither"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>The wither</p></a>
+							<div class="tgian">
+								<p>1 giờ trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 2</a>
+							<a href="#">Chap 1</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-ts.jpg" alt="những cuộc phiêu lưu của tom sawyer"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Tom Sawyer</p></a>
+							<div class="tgian">
+								<p>1 giờ trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chap 2</a>
+							<a href="#">Chap 1</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row-img">
+							<a href="book.html"><img src="../photo/book/3-vn.jpg" alt="vợ nhặt"></a>
+						</div>
+						<div class="row-title">
+							<a href="book.html"><p>Vợ Nhặt</p></a>
+							<div class="tgian">
+								<p>2 giờ trước</p>
+							</div>
+							<div class="chuong">
+							<a href="#">Chhương 1</a>
+							</div>
+						</div>
+					</div>					
+					<div class="btn-full">
+						<button>Xem thêm >></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="seen-full">
+				<div class="tik"></div>
+				<div class="seen-title">
+					<h3>SÁCH ĐÃ XEM</h3>
+				</div>
+				<div class="seen-book">					
+					<div class="book-s">
+						<p>Bạn chưa xem quyển sách nào...</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="like-full">
+				<div class="tok"></div>
+				<div class="like-title">
+					<h3>SÁCH YÊU THÍCH</h3>
+				</div>
+				<div class="like-book">
+					<div class="book-l">
+						<p>Bạn chưa thích quyển sách nào...</p>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+	<div class="sp">
+		<div class="sp-text">
+			<div class="sp-logo"><a href="#" class="logo-sup"><img src="../photo/logo/1-cover.png" alt="hbbook"></a></div>
+			<div class="sp-tittle">
+				<p>Đọc sách online, sách full, sách hay. Website luôn cập nhật những bộ sách mới thuộc các thể loại đặc sắc như tiểu thuyết, truyện ngắn, hay sách văn học một cách nhanh nhất.</p> 
+			</div>
+		</div>
+	</div>
+
+	<a href="#" id="gotop"><i class="fa fa-arrow-up"></i></a>
+	<script>
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("gotop").style.display = "block";
+			} else {
+				document.getElementById("gotop").style.display = "none";
+			}
+		}
+		document.getElementById('gotop').addEventListener("click", function(){
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		});
+	</script>	
+</body>
+
+</html>

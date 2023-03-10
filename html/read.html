@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Game of Thrones | HBBook</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../css/read.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<hr/ color= "#fd8d6e" style="margin: 0px; border-top-width: 0px;padding-top: 4px">
+	<div class="top">
+		<div class="menu">
+			<div class="menu-logo">
+				<a href="home.html" class="logo-top">
+					<img src="../photo/logo/1-profile.png" alt="hbbook">
+				</a>
+			</div>
+
+			<div class="menu-main">
+				<div class="nuu">
+					<ul class="menu-item">
+						<li><a href="../html/home.html" style="font-weight: bold;">TRANG CHỦ</a></li>
+						<li><a href="../html/full_book.html" style="font-weight: bold;">THƯ VIỆN SÁCH</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="font-weight: bold;">THỂ LOẠI</a>
+							<ul class="dropdown-list dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#">Tiểu thuyết</a></li>
+								<li><a href="#">Văn học</a></li>
+								<li><a href="#">Tập truyện ngắn</a></li>
+								<li><a href="#">Hành động - Giật gân</a></li>
+								<li><a href="#">Sách thiếu nhi</a></li>
+								<li><a href="#">Tâm lý - Tình cảm</a></li>
+								<li><a href="#">Manga (Truyện tranh)</a></li>
+								<li><a href="#">Ngụ ngôn</a></li>
+								<li><a href="#">Viễn tưởng</a></li>                                    
+							</ul>  
+						</li>
+					</ul>
+				</div>
+
+				<div class="search">
+					<input type="text" placeholder="Nhập tên sách" class="search-txt">
+					<a href="#" class="search-btn">
+						<img src="../photo/icon/search.png">
+					</a>
+				</div>
+
+				<div class="menu-tk">
+					<button type="button" class="btn-dnhap" data-toggle="modal" data-target="#exampleModalCenter">
+						TÀI KHOẢN
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="transition: 0.5s">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">TÀI KHOẢN</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+
+				<div class="modal-body">
+					<div class="box">
+						<div class="btn-box">
+							<div id="btn" style="width: 121px;"></div>
+							<button type="button" class="box-btn" onclick="dnhap()">Đăng nhập</button>
+							<button type="button" class="box-btn" onclick="dky()">Đăng ký</button>
+						</div>
+						<div class="social">
+							<img src="../login/facebook.png" alt="fb">
+							<img src="../login/google.png" alt="gg">							
+							<img src="../login/instagram.png" alt="ins">				
+						</div>
+						<form id="dnhap" class="form-box">
+							<input type="text" class="name" placeholder="Tên đăng nhập" required="">
+							<input type="password" class="name" placeholder="Mật khẩu" required="">
+							<input type="checkbox" class="check-box">
+							<span class="lg">Ghi nhớ đăng nhập</span>
+							<button type="submit" class="sub-btn">Đăng nhập</button>
+						</form>
+
+						<form id="dky" class="form-box">
+							<input type="text" class="name" placeholder="Tên đăng nhập" required="">
+							<input type="text" class="name" placeholder="Email" required="">
+							<input type="password" class="name" placeholder="Mật khẩu" required="">
+							<input type="checkbox" class="check-box">
+							<span class="lg">Tôi đồng ý với điều khoản</span>
+							<button type="submit" class="sub-btn">Đăng kí</button>
+						</form>
+					</div>
+					<script>
+						var x = document.getElementById("dnhap");
+						var y = document.getElementById("dky");
+						var z = document.getElementById("btn");
+
+						function dky(){
+							x.style.left = "-400px";
+							y.style.left = "50px";
+							z.style.left = "121px";
+						}
+						function dnhap(){
+							x.style.left = "50px";
+							y.style.left = "450px";
+							z.style.left = "0px";
+						}							
+					</script>
+				</div>					
+			</div>
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="logo-full">
+			<div class="danhdau">
+				<img src="../photo/b.jpg">
+			</div>
+		</div>		
+
+		<div class="trovao">
+			<div class="home" style="float: left;">
+				<a href="home.html">Trang chủ</a> >>
+			</div>
+			<div class="truyen" style="float: left;">
+				<a href="book.html">Game of Thrones</a> >>
+			</div>
+			<div class="truyen" style="float: left;">
+				Chương 0
+			</div>
+		</div>
+
+		<div class="trang">
+			<div class="trang-title">
+				<h3>Trò chơi vương quyền</h3>
+			</div>
+			<div class="trang-chuong">
+				<h3>Chương 0</h3>
+			</div>
+			<div class="trang-next">
+				<ul>
+					<li><i class="fa fa-chevron-left" aria-hidden="true"></i></li>
+					<li><i class="fa fa-th-list" aria-hidden="true"></i></li>
+					<li><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+				</ul>
+			</div>
+			<div class="trang-doc">
+				<div class="noidung">
+					<p>MỞ ĐẦU</p>
+					<p>“Chúng ta nên về thôi,” Gared giục khi thấy cánh rừng xung quanh tối dần. “Bọn dân du mục chết cả rồi.”</p>
+					<p>“Ông sợ người chết hả?” Ser[1] Waymar Royce hỏi, khóe miệng nhếch lên.</p>
+					<p>Gared không phải sinh ra để làm con mồi. Ông đã già, trạc ngoại ngũ tuần và ông đã chứng kiến nhiều lãnh chúa đến rồi đi. “Người chết thì đã chết rồi,” ông nói. “Chúng ta không có việc gì với mấy xác chết cả.”</p>
+					<p>“Chúng chết thật sao?” Royce mỉa mai. “Chúng ta có bằng chứng gì đâu?”</p>
+					<p>“Will đã thấy chúng,” Gared nói. “Nếu anh ta nói chúng chết, thế là đủ với tôi lắm rồi.”</p>
+					<p>Will biết không sớm thì muộn họ cũng lôi anh vào trận cãi vã này. Nhưng anh mong muộn vẫn hơn.</p>
+					<p>“Mẹ tôi bảo kẻ chết sẽ không hát hò nữa,” anh xen vào.</p>
+					<p>“Bà vú lẩm cẩm của tôi cũng nói thế đó, Will,” Royce trả lời. “Đừng tin những lời anh nghe bên ngực đàn bà. Có nhiều điều có thể học từ người chết lắm.” Giọng hắn oang oang khắp khu rừng trong buổi chạng vạng.</p>
+					<p>“Chúng ta còn một đoạn đường dài trước mắt,” Gared nhận định. “Tám ngày, có thể là chín. Mà trời tối rồi.”</p>
+					<p>Ser Waymar Royce hững hờ nhìn trời. “Ngày nào trời chẳng tối. Giờ ông lại sợ trời tối nữa hả, Gared?”</p>
+					<p>Will có thể thấy Gared mím chặt môi và sự giận dữ hằn trong đáy mắt dù ông ta đang đội mũ trùm đen sùm sụp. Gared đã sống bốn mươi năm trong Đội Tuần Đêm, từ lúc còn là một cậu nhóc tới lúc trưởng thành. Ông không thích bị xem thường. Nhưng còn có điều gì đó hơn thế. Ngoài lòng tự trọng bị tổn thương, Will còn cảm nhận một thứ khác ở nơi ông già này. Ai cũng có thể đánh hơi thấy điều đó, đó là sự căng thẳng lớn dần thành nỗi sợ hãi.</p>
+					<p>Will cũng thấy bất an. Anh đã ở đội Tường Thành bốn năm nay rồi. Lần đầu tiên anh nhận lệnh rời khỏi đây, tất cả những câu chuyện thời xưa bé ùa về, khiến anh són ra quần. Sau này nghĩ lại anh đã tự giễu mình mãi. Anh đã từng là một chiến binh kỳ cựu tham gia cả trăm trận chiến. Vùng rừng hoang đen tối bất tận mà người miền nam gọi là Khu Rừng Ma đã không còn là nỗi sợ đối với anh.</p>
+					<p>Cho tới tối nay. Có cái gì đó khang khác. Có cái gì đó trong bóng tối làm anh dựng tóc gáy. Họ đã cưỡi ngựa chín ngày liền, về hướng bắc, tây bắc rồi lại bắc, ngày càng xa rời Tường Thành, theo dấu dân du mục. Ngày qua ngày thời tiết lại tệ hơn. Và hôm nay là ngày kinh khủng nhất. Cơn gió lạnh thổi tới từ phương bắc khiến cây cối xào xạc như những sinh vật sống. Cả ngày nay Will cứ cảm thấy có gì đó lén lút quan sát anh, cái gì đó lạnh lẽo và khó nắm bắt, một thứ không yêu quý anh chút nào. Gared cũng cảm nhận được điều đó. Will không muốn gì hơn là được cưỡi ngựa trở về trong sự an toàn của Tường Thành. Nhưng có những điều đâu thể nói với chỉ huy.</p>
+					<p>Đặc biệt là dạng chỉ huy như người này.</p>
+					<p>Ser Waymar Royce là con út trong một gia đình dòng dõi với nhiều người thừa kế. Hắn chỉ là một thiếu niên ở độ tuổi mười tám, đẹp trai, mắt xám, duyên dáng và mảnh mai như một lưỡi dao. Cưỡi trên con hắc mã to lớn, trông tay kỵ sĩ đó vượt trội hơn hẳn Will và ông Gared cưỡi trên mấy con ngựa nhỏ hơn. Hắn đi bốt da đen, quần lông cừu đen, găng tay da chuột chũi đen, khoác một chiếc áo giáp xích màu đen loại tốt lấp lánh bên ngoài hàng lớp áo bằng len và dạ thuộc công đen nốt. Ser Waymar là anh em đồng hữu của Đội Tuần Đêm gần nửa năm nay. Nhưng không ai dám nói rằng hắn không chuẩn bị gì cho công việc của mình. Ít nhất là về vấn đề ăn mặc.</p>
+					<p>Áo choàng đối với hắn là cả một niềm tự hào; làm bằng da chồn, đen, dày dặn và mềm như nhung. “Tôi cá là hắn tự mình giết chết chúng,” Gared trong một lần quá chén đã nói với trại lính. “Chiến binh dũng mãnh của chúng ta chắc chắn đã vặn cổ mấy con vật nhỏ xíu đó.” Tất cả đều cười ầm lên.</p>
+					<p>Thật khó lòng tuân lệnh một người mà mình lôi ra làm trò cười trong những lần chè chén. Will nghĩ vậy khi ngồi run rẩy trên lưng ngựa. Chắc hẳn ông Gared cũng cảm thấy như thế.</p>
+					<p>“Mormont nói chúng ta phải đuổi theo chúng, và chúng ta đã làm,” Gared nói.</p>
+					<p>“Chúng chết rồi. Chúng sẽ không gây rắc rối gì cho chúng ta nữa. Đoạn đường trước mặt rất khó đi. Tôi không thích thời tiết này. Nếu tuyết rơi, chúng ta sẽ phải mất đến hai tuần lễ mới về được. Mà tuyết là còn may đấy. Ngài đã bao giờ thấy bão tuyết chưa?”</p>
+					<p>Gã tiểu quý tộc hình như không nghe thấy ông nói. Hắn đang quan sát buổi trời chiều đang dần chuyển sắc đen theo kiểu nửa chán chường nửa hờ hững. Will đã đi cùng gã hiệp sĩ này đủ lâu để hiểu giờ đừng nên làm phiền hắn. “Nói lại cho tôi nghe tất cả những gì anh thấy, Will. Tất cả chi tiết. Không bỏ sót điều gì.”</p>
+					<p>Will đã là thợ săn trước khi trở thành thành viên Đội Tuần Đêm. Đúng ra là một kẻ săn trộm. Những kị binh nhà Mallister đã tóm sống anh tại khu rừng nhà họ, khi anh đang lột da con hươu đực. Anh phải chọn hoặc là khoác bộ đồ đen trên người hoặc bị chặt một bàn tay. Không ai có thể di chuyển trong rừng êm ru như Will, và hội anh em mặc đồ đen không mất nhiều thì giờ để phát hiện ra tài năng ấy.</p>
+					<p>“Chúng dựng lán cách đây hai dặm, bên kia gò đất, cạnh bờ suối.” Will nói. “Tôi đã tới gần hết mức. Tất cả có tám người, cả đàn ông và đàn bà. Tôi không thấy có trẻ con. Họ dựng mái che tựa vào đá. Giờ tuyết phủ dày trên đó, nhưng tôi vẫn nhìn ra được. Họ không đốt lửa, nhưng vẫn ủ lửa. Không một ai cử động. Tôi đã quan sát rất lâu. Không một người sống nào có thể bất động lâu vậy.”</p>
+					<p>“Anh có thấy máu me gì không?”</p>
+					<p>“Ờm, không,” Will thừa nhận.</p>
+					<p>“Có thấy vũ khí không?”</p>
+					<p>“Vài thanh kiếm, một ít cung tên. Có một tên cầm rìu. Trông có vẻ nặng nề, loại hai lưỡi, làm bằng thép cứng. Nó nằm trên mặt đất, cạnh hắn.”</p>
+					<p>“Anh có thấy gì lạ thường về tư thế của mấy cái xác không?”</p>
+					<p>Will nhún vai. “Hai tên ngồi tựa lưng vào nhau. Còn hầu hết đều nằm trên mặt đất. Giống như ngã xuống ấy.”</p>
+					<p>“Hoặc đang ngủ,” Royce gợi ý.</p>
+					<p>“Ngã,” Will khẳng định. “Có một ả đàn bà nằm vắt ngang trên một khúc gỗ cứng, bị những cành cây che mất một nửa. Mắt nhìn ngây dại.” Anh mím môi cười. “Tôi cẩn thận để mụ ta không nhìn thấy mình. Khi tôi tới gần hơn, tôi thấy mụ ta cũng không nhúc nhích.” Dù cố nhưng anh vẫn rùng mình.</p>
+					<p>“Anh bị lạnh à?” Royce hỏi.</p>
+					<p>“Chút chút,” Will lầm bầm. “Do gió ấy mà, thưa chỉ huy.”</p>
+					<p>Gã hiệp sĩ trẻ quay lưng với người kỵ binh tóc hoa râm. Tiếng lá rụng mùa đông xào xạc khiến con chiến mã của Royce đi lại bồn chồn không yên. “Vậy ông nghĩ cái gì đã giết họ hả Gared?” Ser Waymar vừa hỏi vừa chỉnh lại vạt áo choàng lông chồn.</p>
+					<p>“Cái lạnh,” Gared nói chắc như đinh đóng cột. “Tôi đã thấy những người bị đóng băng vào mùa đông năm ngoái, cả mùa trước đó nữa, khi tôi còn là một thiếu niên. Mọi người nói rằng, tuyết rơi dày hơn mười hai mét, những trận gió tuyết gầm rú suốt miền bắc, nhưng kẻ thù thực sự là cái lạnh. Nó luồn vào người anh im lặng hơn cả bước chân của Will, và lúc đầu ta run rẩy, răng đập lập cập, rồi ta dậm chân và mơ tới những cốc rượu và bếp lửa ấm. Nó thiêu đốt. Không có gì thiêu đốt như cái lạnh cả. Nhưng chỉ được một lúc thôi. Sau đó nó luồn lách và thấm sâu vào cơ thể ta. Một lúc sau, ta sẽ không thể thắng nổi nó. Và rồi ta chỉ muốn ngồi xuống và chợp mắt. Họ nói ta sẽ không thấy chút đau đớn nào cho tới tận giây phút cuối cùng. Đầu tiên ta mệt đi và ngủ lơ mơ, mọi thứ nhòa dần. Sau đó ta sẽ cảm thấy như mình được ngâm mình trong một bồn sữa ấm vậy. Bình yên như thế đấy.”</p>
+					<p>“Ông cũng giỏi hùng biện đấy chứ, Gared,” Ser Waymar nhận xét. “Thế mà tôi không nhận ra.”</p>
+					<p>“Tôi cũng từng bị lạnh rồi, thưa ngài.” Gared bỏ mũ trùm ra, khiến Ser Waymar phải nhìn hồi lâu vào vết sẹo nơi đã từng là tai của ông. “Tôi đã mất hai tai, ba ngón chân, và ngón út tay trái tôi. Tôi đã thoát được. Nhưng em trai tôi đã chết cóng trong ca trực, khuôn mặt nó khi ấy vẫn ánh lên một nụ cười.”</p>
+					<p>Ser Waymar nhún vai. “Đáng ra ông nên mặc ấm hơn, Gared.”</p>
+					<p>Gared liếc nhìn tên tiểu quý tộc, những vết sẹo quanh lỗ tai ông đỏ ửng lên vì giận dữ. “Chúng ta sẽ xem ngài mặc ấm đến thế nào khi đông tới.” Ông đội mũ trùm lên và leo lên lưng ngựa, im lặng và ủ rũ.</p>
+					<p>“Nếu ông Gared nói là do lạnh...” Will dợm nói.</p>
+					<p>“Anh có trực gác lần nào trong tuần qua không, Will?”</p>
+					<p>“Có.” Không tuần nào anh không phải gác tới mười hai ca. Người đàn ông này định nói gì đây?</p>
+					<p>“Anh thấy Tường Thành rồi chứ?”</p>
+					<p>“Ấm ướt,” Will nói và nhíu mày. Anh nhìn thấy nó rõ rồi, giờ gã tiểu quý tộc kia đang chỉ ra. “Họ không thể nào đóng băng. Không thể khi Tường Thành vẫn bị ẩm ướt. Trời chưa lạnh tới mức đó.”</p>
+					<p>Royce gật đầu. “Thông minh lắm. Tuần trước chúng ta gặp vài trận sương giá, và thi thoảng có vài trận mưa tuyết bất chợt, nhưng chắc chắn trời chưa đủ lạnh để có thể giết chết tám người trưởng thành. Để tôi nhắc cho hai vị hay, những người đó mặc đồ lông và da thú, họ lại có nơi trú ẩn, và thứ để tạo lửa.” Gã kỵ sĩ cười cực kỳ khinh miệt. “Will, dẫn chúng ta tới đó. Tôi muốn tự mình nhìn thấy đám người chết đó.”</p>
+					<p>Chẳng cần bàn cãi gì nữa. Lệnh đã được ban ra, và danh dự buộc họ phải tuân lệnh.</p>
+					<p>Will đi trước, con ngựa nhỏ bờm xờm của anh cẩn trọng đi trên con đường mấp mô. Đêm trước trời đổ trận tuyết nhẹ, những hòn đá, rễ cây và những vũng lầy ẩn ngay dưới lớp băng, đợi kẻ vô ý bất cẩn. Ser Waymar Royce theo sau, con hắc mã lớn khụt khịt không thôi. Ngựa chiến không phải là loại ngựa biết đi theo hàng lối, nhưng thử nói với tay tiểu quý tộc đó xem. Gaređ đi đoạn hậu. Người kỵ binh già lẩm bẩm gì đó một mình.</p>
+					<p>Trời càng tối hơn. Bầu trời không mây chuyển sang màu huyết dụ, màu của những vết thâm lâu ngày, rồi chuyển dần sang một màu đen thăm thẳm. Bầu trời điểm xuyết những ánh sao cùng một vầng trăng khuyết. Will mừng vì có chút ánh sáng.</p>
+					<p>“Chúng ta chắc chắn có thể đi nhanh hơn,” Royce nói khi thấy trăng tới đỉnh đầu.</p>
+					<p>“Không phải với con ngựa này,” Will nói. Sợ hãi làm anh to gan hơn. “Có lẽ ngài nên đi đầu?”</p>
+					<p>Ser Waymar Royce không thèm trả lời.</p>
+					<p>Từ nơi nào đó trong rừng vọng lên tiếng sói tru.</p>
+					<p>Will kéo dây cương nhảy qua một khúc cây lim già khúc khuỷu chắn lối và xuống ngựa.</p>
+					<p>“Vì sao anh dừng lại?” Ser Waymar hỏi.</p>
+					<p>“Tốt nhất là đi bộ thôi. Chúng ta chỉ cần đi qua gò đất kia.”</p>
+					<p>Royce ngừng lại một lát, nhìn chằm chằm vào khoảng không và suy ngẫm. Gió lạnh thổi qua tán cây nghe xào xạc. Chiếc áo choàng lông chồn bay bay như mang chút sự sống.</p>
+					<p>“Có gì đó không ổn,” Gared lẩm bẩm.</p>
+					<p>Gã hiệp sĩ trẻ cười khinh bỉ. “Có gì sao?”</p>
+					<p>“Ngài không cảm thấy à?” Gared hỏi. “Hãy lắng nghe bóng tối đi.”</p>
+					<p>Will có thể cảm nhận được. Đã bốn năm trong Đội Tuần Đêm và anh chưa từng có cảm giác sợ thế này. Cái này là gì đây?</p>
+					<p>“Gió thổi. Cây lá xào xạc. Sói tru. m thanh nào khiến ông mất nhuệ khí vậy, Gared?”</p>
+					<p>Khi Gared không trả lời, Royce uyển chuyển xuống ngựa. Hắn cẩn thận buộc ngựa vào một khúc cây thấp, tránh xa những con ngựa khác, và rút thanh trường kiếm ra khỏi bao. Đá quý lấp lánh nơi chuôi kiếm, và ánh trăng chạy dọc theo lưỡi thép sáng lạnh. Đó là món vũ khí tuyệt đẹp, được rèn trong cung điện và trông có vẻ mới. Will nghĩ nó thậm chí còn chưa bao giờ được vung lên.</p>
+					<p>“Chỗ này cây cối rậm rạp lắm,” Will cảnh báo. “Thanh kiếm đó sẽ chỉ làm ngài vướng chân vướng tay thôi. Tốt hơn ngài nên dùng dao.”</p>
+					<p>“Nếu cần hướng dẫn, ta sẽ hỏi,” tay quý tộc trẻ nói. “Gared, ở lại trông ngựa.”</p>
+					<p>Gared xuống ngựa. “Chúng ta cần có lửa ấm. Tôi sẽ đi kiếm.”</p>
+					<p>“Sao ông ngốc thế hả ông già? Nếu có kẻ thù trong khu rừng này, lửa là thứ cuối cùng chúng ta cần.”</p>
+					<p>“Nhưng lửa cũng khiến vài kẻ thù tránh xa,” Gared nói. “Gấu và sói tuyết và... vài thứ khác...”</p>
+					<p>Ser Waymar mím chặt môi. “Không củi lửa gì cả.”</p>
+					<p>Mũ trùm phủ bóng lên khuôn mặt Gared, nhưng Will có thể nhận thấy sự sắc lạnh trong mắt khi ông nhìn tay hiệp sĩ. Trong giây lát, anh sợ ông già sẽ rút kiếm. Đó là một thanh đoản kiếm, xấu xí, chuôi kiếm đã đổi màu do mồ hôi, lưỡi kiếm sứt mẻ vì dùng nhiều, nhưng Will sẽ không cược một đồng cắc nào ạng sống của tay tiểu quý tộc nếu ông Gared rút kiếm ra khỏi vỏ.</p>
+					<p>Cuối cùng Gared cúi đầu. “Không lửa,” ông lầm bầm.</p>
+					<p>Royce thỏa hiệp xong và quay đi. “Dẫn đường đi.” Hắn nói với Will.</p>
+					<p>Will phát đường qua bụi rậm rồi dẫn đầu đi lên gò đất thấp nơi anh đã tìm thấy điểm quan sát thuận lợi nhất ngay dưới gốc cây cao. Bên dưới lớp tuyết mỏng, mặt đất lầy lội, ẩm ướt và trơn trượt, đầy sỏi đá và rễ ngầm dễ làm bạn sẩy chân. Will trèo không gây tiếng động. Ở phía sau, anh nghe có tiếng kim loại sột soạt khe khẽ phát ra từ áo giáp xích của tay tiểu quý tộc, tiếng lá cây xì xào, và tiếng lẩm bẩm chửi rủa khi những cành cây vướng vào thanh trường kiếm và mắc vào chiếc áo choàng lông chồn lộng lẫy của hắn.</p>
+					<p>Cái cây nằm ngay trên đỉnh gò, ở nơi Will đã biết trước. Nhánh thấp nhất cách mặt đất khoảng một bước chân. Will trườn qua, nằm sấp xuống tuyết và bùn đất, rồi nhìn xuống trảng trống bên dưới.</p>
+					<p>Tim anh như ngừng đập. Anh không dám thở nữa. Ánh trăng chiếu sáng vùng trảng trống, tàn tro của đống lửa, những mái lán phủ tuyết, tảng đá lớn, dòng suối nhỏ đóng băng một nửa. Mọi thứ vẫn y như vài giờ trước.</p>
+					<p>Nhưng chúng đã biến mất. Tất cả những cái xác đều biến mất.</p>
+					<p>“Thánh thần ơi!” anh nghe có tiếng đằng sau. Thanh kiếm chém gẫy một cành cây khi Ser Waymar lên được gò đất. Hắn đứng đằng sau cái cây với thanh trường kiếm trên tay, áo choàng tung bay trong gió. Những đường nét lộng lẫy hiện rõ trên nền trời đầy sao lấp lánh.</p>
+					<p>“Nằm xuống!” Will thì thầm nài nỉ. “Có gì đó không ổn.”</p>
+					<p>Royce không động cựa. Hắn nhìn xuống trảng trống và cười lớn. “Hình như người chết của anh đã chuyển lán đi rồi, Will.”</p>
+					<p>Will không nói lên lời. Anh cố tìm từ để nói, nhưng không thể. Không thể nào. Mắt anh đảo qua đảo lại bãi đất trống và ngừng lại trên cây rìu. Cây rìu chiến to tướng hai lưỡi vẫn nằm ở nơi anh đã thấy, không hề bị chạm tới. Một thứ vũ khí đáng giá...</p>
+					<p>“Đứng lên, Will,” Ser Waymar ra lệnh. “Ở đây không có ai. Ta không cần anh trốn trong bụi.”</p>
+					<p>Will chần chừ rồi tuân lệnh.</p>
+					<p>Ser Waymar nhìn anh với vẻ chê trách lộ rõ. “Ta sẽ không về Hắc Thành với thất bại ngay từ nhiệm vụ đầu tiên. Chúng ta sẽ tìm kiếm chúng.” Hắn liếc nhìn quanh. “Trèo lên cây. Nhanh lên. Tìm kiếm ánh lửa xem.”</p>
+					<p>Will quay người không nói một lời. Cãi vã chẳng ích gì. Gió đang thổi. Cái lạnh cắt xuyên qua anh. Anh tới bên cái cây cao vút màu xanh xám và bắt đầu trèo. Tay anh nhanh chóng dính nhơm nhớp nhựa cây và anh lạc trong những tầng lá kim. Nỗi sợ dâng đầy dạ dày anh như thức ăn không thể tiêu hóa. Anh thầm cầu nguyện những vị thần không tên của cánh rừng và rút đao khỏi vỏ. Anh ngậm chặt nó giữa hai hàm răng và dùng cả hai tay mà trèo. Mùi sắt lạnh trong miệng khiến anh thoải mái hơn.</p>
+					<p>Bên dưới, tên tiểu quý tộc đột ngột hét lên. “Ai đó?” Will nghe có âm điệu bối rối trong lời thách thức. Anh ngừng trèo, lắng nghe, quan sát.</p>
+					<p>Chỉ có tiếng rừng cây trả lời: tiếng lá xào xạc, tiếng suối chảy lạnh băng, tiếng cú tuyết kêu từ phía xa.</p>
+					<p>Lũ Ngoại Nhân không gây tiếng động.</p>
+					<p>Will thoáng thấy có gì đó chuyển động qua đuôi mắt. Những vật thể trắng ởn lướt đi trong rừng. Anh quay đầu lại, liếc thấy có bóng trắng trong màn đêm, rồi biến mất. Những cành cây nhẹ nhàng khuấy động trong gió, giống những ngón tay gỗ gãi nhẹ lên nhau. Will mở miệng định cảnh báo, nhưng lời nói dường như đã đông cứng trong cổ họng. Có lẽ anh đã nhầm. Chắc đó chỉ là một con chim, một cái bóng phản chiếu trên tuyết hoặc một trò lừa của ánh trăng. Vậy cuối cùng, anh đã nhìn thấy cái gì?</p>
+					<p>“Will, anh ở đâu?” Ser Waymar gọi với lên. “Anh có nhìn thấy gì không?”</p>
+					<p>Gã chầm chậm quay người theo vòng tròn, đột nhiên cảnh giác, thanh kiếm nắm chắc trên tay. Chắc chắn gã cũng cảm nhận được chúng, như Will vậy.</p>
+					<p>“Trả lời tôi! Sao trời lạnh thế?”</p>
+					<p>Trời lạnh thật. Will rùng mình, nắm chặt cành cây hơn và áp mặt vào vỏ cây. Anh có thể cảm nhận nhựa cây dinh dính, ngòn ngọt trên má minh.</p>
+					<p>Một bóng người bước ra khỏi bóng tối của rừng cây. Hắn đứng trước mặt Royce, cao, khẳng khiu và cứng đơ như khúc xương lâu ngày với lớp da trắng ngà như sữa. Bộ giáp của hắn dường như đổi màu theo từng chuyển động: chỗ trắng như tuyết, chỗ đen như màn đêm, mọi chỗ đều lốm đốm màu xanh xám của rừng cây. Những hoa văn ấy chạy dọc theo từng bước chân như ánh trăng soi lên mặt nước.</p>
+					<p>Will nghe hơi thở rời khỏi Ser Waymar Royce trong tiếng rít dài.</p>
+					<p>“Không được tiến lên,” tên tiểu quý tộc cảnh cáo. Giọng hắn vỡ ra như của một đứa nhỏ. Gã quất áo choàng lông chồn ra sau vai để tay rảnh rang chiến đấu và cầm kiếm bằng cả hai tay. Gió đã ngừng thổi. Trời lạnh giá vô cùng.</p>
+					<p>Ngoại Nhân lướt đi êm ru. Trên tay hắn cầm một thanh trường kiếm Will chưa bao giờ thấy. Không một thứ kim loại nào của loài người có thể rèn nên lưỡi kiếm đó. Nó sống động dưới ánh trăng, trong suốt, như một mảnh pha lê mỏng manh tới mức dường như tan biến nếu nhìn từ sống kiếm. Xung quanh nó tỏa ra một thứ ánh sáng xanh nhàn nhạt, thứ ánh sáng ma mị đó bao quanh cạnh kiếm, và anh biết thanh kiếm đó sắc hơn bất cứ lưỡi dao cạo nào.</p>
+					<p>Ser Waymar dũng cảm đối diện với nó. “Vậy thì khiêu vũ cùng ta đi.” Gã giơ kiếm cao quá đầu, đầy thách thức. Tay gã run lên vì sức nặng, hoặc giả, vì lạnh. Nhưng trong giây phút đó, Will nghĩ, tay tiểu quý tộc không còn là một cậu nhóc nữa, mà là một chiến binh thực thụ của Đội Tuần Đêm.</p>
+					<p>Tên Ngoại Nhân dừng lại. Will thấy đôi mắt hắn: sâu và xanh hơn mắt người, một màu xanh thiêu đốt như băng. Hắn nhìn xoáy vào thanh trường kiếm run rẩy trên cao, quan sát ánh trăng mang theo hơi lạnh phả lên lưỡi kiếm. Trong một tích tắc, anh dám chắc là mình đã hy vọng.</p>
+					<p>Hai tên nữa im lặng tiến ra từ bóng tối, song song với tên đầu tiên. Ba... bốn... năm... Ser Waymar có thể cảm giác được cái lạnh đến cùng với chúng, nhưng gã không bao giờ nhìn thấy hay nghe thấy chúng. Will phải hét lên. Đó là nhiệm vụ của anh. Và nếu anh làm thế, anh sẽ chết. Anh rùng mình, ôm chặt lấy cái cây, và im lặng.</p>
+					<p>Thanh kiếm bạc rung lên trong không khí.</p>
+					<p>Hai lưỡi kiếm va vào nhau, không phát ra tiếng kêu của kim loại va vào kim loại; chỉ có thứ âm thanh mỏng và chói tai, như tiếng động vật kêu lên trong đau đớn. Royce chém nhát thứ hai, thứ ba, rồi lùi lại một bước. Khua loạn xạ thêm vài nhát kiếm nữa, hắn lại lùi tiếp.</p>
+					<p>Đằng sau hắn, bên trái, bên phải, xung quanh hắn, bọn chúng vẫn kiên nhẫn quan sát, lạnh lùng và im lặng. Hoa văn dịch chuyển trên những chiếc áo giáp thanh nhã khiến chúng như ẩn như hiện trong rừng. Nhưng chúng chưa có ý định can thiệp.</p>
+					<p>Những lưỡi kiếm hết lần này tới lần khác va vào nhau, tới khi Will phải che tai khỏi nghe tiếng kêu chát chúa đau khổ kỳ lạ đó. Giờ Ser Waymar đã thở dốc, hơi thở bốc khói dưới ánh trăng. Lưỡi kiếm của hắn bị băng bao phủ trắng xóa; thanh kiếm của lũ Ngoại Nhân nhảy múa cùng ánh sáng xanh nhàn nhạt.</p>
+					<p>Và nhát đỡ của Royce đã chậm mất một nhịp. Lưỡi kiếm trắng lạnh kia đâm xuyên qua phần giáp dưới cánh tay hắn. Gã tiểu quý tộc hét lên trong đau đớn. Máu túa ra giữa những mắt xích, bốc hơi vì lạnh. Từng giọt, từng giọt rơi xuống nền tuyết trắng, đỏ như lửa. Ser Waymar ôm chặt một bên mình. Găng tay da chuột chũi thấm đẫm một màu đỏ tươi.</p>
+					<p>Ngoại Nhân nói gì đó bằng thứ ngôn ngữ Will không biết; giọng y như tiếng băng vỡ trên mặt hồ mùa đông, và lời nói dường như là chế nhạo.</p>
+					<p>Ser Waymar Royce điên tiết. “Vì vua Robert!” hắn hét lên và đứng dậy gầm gừ. Giơ thanh trường kiếm bị băng bao phủ bằng cả hai tay, hắn vung kiếm chém ngang người bằng hết sức bình sinh. Ngoại Nhân lười nhác đỡ lấy.</p>
+					<p>Khi hai thanh kiếm chạm vào nhau, lưỡi thép vỡ tan.</p>
+					<p>Một tiếng hét vang vọng trong rừng đêm, và thanh trường kiếm vỡ tan thành hàng trăm mảnh, bay tứ tán như một trận mưa kim loại. Royce quỳ xuống, hét lên, đôi mắt nhắm nghiền. Máu ứa ra từ những kẽ ngón tay.</p>
+					<p>Những kẻ quan sát nhất tề tiến lên như thể thấy một dấu hiệu nào đó. Những thanh kiếm giơ lên rồi hạ xuống, trong sự im lặng chết người. Một màn xả thịt lạnh lùng. Những lưỡi kiếm bàng bạc xuyên qua áo giáp như thể nó được làm bằng lụa. Will nhắm tịt mắt. Xa xa bên dưới, anh nghe tiếng chúng cười nói sắc lạnh như những trụ băng.</p>
+					<p>Khi anh đủ dũng khí nhìn xuống, kha khá thời gian đã trôi qua, gò đất bên dưới giờ trống không.</p>
+					<p>Anh giấu mình trên cây, hầu như không dám thở. Vầng trăng từ tốn đi hết bầu trời đen thăm thẳm. Cuối cùng, tới khi cảm thấy bị chuột rút và những ngón tay cứng đờ vì lạnh, anh mới từ từ trượt xuống.</p>
+					<p>Thi thể Royce nằm úp mặt xuống tuyết, một cánh tay lìa ra. Chiếc áo choàng lông chồn dày dặn bị chém rách tơi tả. Nhìn gã nằm bất động ở đó mới thấy rõ tuổi đời hắn trẻ thế nào. Chỉ là một thằng nhóc.</p>
+					<p>Anh thấy phần còn lại của thanh kiếm cách đó vài mét, chuôi kiếm bị gẫy và vặn cong như một cành cây bị sét đánh trúng. Will quỳ xuống, cảnh giác nhìn quanh rồi nhặt nó lên. Thanh kiếm gẫy sẽ là bằng chứng. Gared sẽ biết phải làm gì với nó. Và nếu không phải ông thì cũng là con gấu già Mormont hoặc Maester[2] Aemon sẽ nghĩ ra một câu chuyện. Gared còn chờ ở đó cùng mấy con ngựa không? Anh phải nhanh lên.</p>
+					<p>Will đứng dậy. Nhưng cái xác của Ser Waymar Royce đã ngăn anh lại.</p>
+					<p>Bộ quần áo đẹp đẽ của hắn đã rách nát, khuôn mặt bị biến dạng. Mảnh kiếm gẫy chọc thủng mắt trái hắn, con ngươi trắng dã mù mịt.</p>
+					<p>Còn con mắt phải vẫn mở. Con ngươi cháy xanh. Nó đang nhìn.</p>
+					<p>Thanh kiếm gẫy rơi khỏi bàn tay Will giờ đây đã không còn khí lực. Will nhắm mắt cầu nguyện. Những bàn tay dài, thanh thoát vuốt má anh rồi bóp nghẹt cổ anh. Chúng đeo đôi găng da chuột chũi tốt nhất và dính nhơm nhớp máu, nhưng cái chạm vẫn lạnh giá như băng.</p>
+				</div>
+			</div>
+
+			<div class="trang-next">
+				<ul>
+					<li><i class="fa fa-chevron-left" aria-hidden="true"></i></li>
+					<li><i class="fa fa-th-list" aria-hidden="true"></i></li>
+					<li><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+		<div class="sp">
+			<div class="sp-text">
+				<div class="sp-logo"><a href="#" class="logo-sup"><img src="../photo/logo/1-cover.png" alt="hbbook"></a></div>
+				<div class="sp-tittle">
+					<p>Đọc sách online, sách full, sách hay. Website luôn cập nhật những bộ sách mới thuộc các thể loại đặc sắc như tiểu thuyết, truyện ngắn, hay sách văn học một cách nhanh nhất.</p> 
+				</div>
+			</div>
+		</div>
+
+		<a href="#" id="gotop"><i class="fa fa-arrow-up"></i></a>
+		<script>
+			window.onscroll = function() {scrollFunction()};
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.getElementById("gotop").style.display = "block";
+				} else {
+					document.getElementById("gotop").style.display = "none";
+				}
+			}
+			document.getElementById('gotop').addEventListener("click", function(){
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			});
+		</script>
+</body>
+
+</html>

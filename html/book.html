@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Game of Thrones | HBBook</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../css/book.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<hr/ color= "#fd8d6e" style="margin: 0px; border-top-width: 0px;padding-top: 4px">
+	<div class="top">
+		<div class="menu">
+			<div class="menu-logo">
+				<a href="home.html" class="logo-top">
+					<img src="../photo/logo/1-profile.png" alt="hbbook">
+				</a>
+			</div>
+
+			<div class="menu-main">
+				<div class="nuu">
+					<ul class="menu-item">
+						<li><a href="../html/home.html" style="font-weight: bold;">TRANG CHỦ</a></li>
+						<li><a href="../html/full_book.html" style="font-weight: bold;">THƯ VIỆN SÁCH</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="font-weight: bold;">THỂ LOẠI</a>
+							<ul class="dropdown-list dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#">Tiểu thuyết</a></li>
+								<li><a href="#">Văn học</a></li>
+								<li><a href="#">Tập truyện ngắn</a></li>
+								<li><a href="#">Hành động - Giật gân</a></li>
+								<li><a href="#">Sách thiếu nhi</a></li>
+								<li><a href="#">Tâm lý - Tình cảm</a></li>
+								<li><a href="#">Manga (Truyện tranh)</a></li>
+								<li><a href="#">Ngụ ngôn</a></li>
+								<li><a href="#">Viễn tưởng</a></li>                                    
+							</ul>  
+						</li>
+					</ul>
+				</div>
+
+				<div class="search">
+					<input type="text" placeholder="Nhập tên sách" class="search-txt">
+					<a href="#" class="search-btn">
+						<img src="../photo/icon/search.png">
+					</a>
+				</div>
+
+				<div class="menu-tk">
+					<button type="button" class="btn-dnhap" data-toggle="modal" data-target="#exampleModalCenter">
+						TÀI KHOẢN
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="transition: 0.5s">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">TÀI KHOẢN</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+
+				<div class="modal-body">
+					<div class="box">
+						<div class="btn-box">
+							<div id="btn" style="width: 121px;"></div>
+							<button type="button" class="box-btn" onclick="dnhap()">Đăng nhập</button>
+							<button type="button" class="box-btn" onclick="dky()">Đăng ký</button>
+						</div>
+						<div class="social">
+							<img src="../login/facebook.png" alt="fb">
+							<img src="../login/google.png" alt="gg">							
+							<img src="../login/instagram.png" alt="ins">				
+						</div>
+						<form id="dnhap" class="form-box">
+							<input type="text" class="name" placeholder="Tên đăng nhập" required="">
+							<input type="password" class="name" placeholder="Mật khẩu" required="">
+							<input type="checkbox" class="check-box">
+							<span class="lg">Ghi nhớ đăng nhập</span>
+							<button type="submit" class="sub-btn">Đăng nhập</button>
+						</form>
+
+						<form id="dky" class="form-box">
+							<input type="text" class="name" placeholder="Tên đăng nhập" required="">
+							<input type="text" class="name" placeholder="Email" required="">
+							<input type="password" class="name" placeholder="Mật khẩu" required="">
+							<input type="checkbox" class="check-box">
+							<span class="lg">Tôi đồng ý với điều khoản</span>
+							<button type="submit" class="sub-btn">Đăng kí</button>
+						</form>
+					</div>
+					<script>
+						var x = document.getElementById("dnhap");
+						var y = document.getElementById("dky");
+						var z = document.getElementById("btn");
+
+						function dky(){
+							x.style.left = "-400px";
+							y.style.left = "50px";
+							z.style.left = "121px";
+						}
+						function dnhap(){
+							x.style.left = "50px";
+							y.style.left = "450px";
+							z.style.left = "0px";
+						}							
+					</script>
+				</div>					
+			</div>
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="logo-full">
+			<div class="danhdau">
+				<img src="../photo/b.jpg">
+			</div>
+		</div>
+
+		<div class="trovao">
+			<div class="home" style="float: left;">
+				<a href="home.html">Trang chủ</a> >>
+			</div>
+			<div class="truyen" style="float: left;">
+				Game of Thrones
+			</div>
+		</div>
+
+		<div class="info">
+			<div class="modau">
+				<div class="info-book">
+					<img src="../photo/book/3-got1.jpg" alt="game of thrones">
+				</div>
+				<div class="info-chu">
+					<h1>Game of Thrones</h1>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star"></span>
+					4/5
+					<p style="padding-top: 5px;">Tên khác : Trò chơi vương quyền</p>
+					<p>Tác giả : <a href="#">George R. R. Martin</a></p>
+					<p>Thể loại : <a href="#">Tiểu thuyết</a>, <a href="#">viễn tưởng</a></p>
+					<p>Số chương : 38</p>
+					<p>Tình trạng : Hoàn thành</p>
+					<p style="padding-bottom: 10px">Xuất bản : 1 tháng 8, 1996</p>
+					<a href="read.html" class="read"><span class="fa fa-columns"></span>Đọc</a>
+					<a href="#" class="like"><span class="fa fa-heart"></span>Yêu thích</a>					
+				</div>
+			</div>
+			<div class="info-them">
+				<p>Trò chơi vương quyền là một series tiểu thuyết sử thi viễn tưởng của tiểu thuyết gia nổi tiếng người Mỹ George R. R. Martin. Lấy cảm hứng từ tiểu thuyết “Cuộc chiến hoa hồng” và “Ivanhoe” Martin bắt đầu viết bộ sách vào năm 1991 và năm 1996 ông cho mắt ấn phẩm đầu tiên. Cuốn tiểu thuyết cũng như cả bộ sách nhanh chóng nhận được sự đón chào nhiệt liệt của một lượng fan hâm mộ khổng lồ, trở thành các tác phẩm best seller của nhiều bảng xếp hạng uy tín. Từ dự định viết một bộ ba tập lúc ban đầu, đến nay Martin đã đẩy kế hoạch đó lên thành bảy tập; và tập năm của bộ sách đã được phát hành vào 12/07/2011 vừa qua.<br>
+				Ngoài việc đoạt được hàng loạt các giải thưởng danh giá như giải khoa học viễn tưởng Hugo Award, bộ tiểu thuyết "Trò chơi vương quyền" đã được bán bản quyền cho hơn 20 nước và dịch ra hơn 20 ngôn ngữ trên thế giới. Tại quê hương của mình, tập thứ tư và thứ năm của bộ sách liên tục đứng ở vị trí số một trong Danh sách bán chạy nhất New York Times vào năm 2005 và 2011. Về số lượng, series tiểu thuyết này đã bán được hơn 7 triệu bản tại Mỹ và hơn 22 triệu bản trên toàn thế giới. Kênh truyền hình HBO đã chuyển thể series tiểu thuyết này sang series phim truyền hình chất lượng cao, đậm chất Holywood khiến danh tiếng của bộ sách cũng như tên tuổi của tác giả ngày càng vang xa. Hiện tại, HBO Việt Nam đang phát song series phim này vào tối thứ năm, thứ 6 hàng tuần.<br>
+				Bộ sách viết về cuộc tranh giành quyền lực của bảy lãnh chúa vùng đất Weterlos và Essos, gồm những khu vực do các dòng họ lớn cai trị, trong bối cảnh nhiều thế lực đen tối có sức mạnh siêu nhiên như người Ngoại nhân, quỷ bóng trắng… luôn đe dọa xâm chiếm Weterlos.<br>
+				Lấy cảm hứng từ các sự kiện lịch sử như lịch sử nước Anh thời kỳ “Cuộc chiến hoa hồng”, nhưng Martin cố tình bất chấp các quy ước về thể loại giả tượng để viết nên bộ tiểu thuyết này. Bạo lực, tình dục và sự mơ hồvề đạo đức thường xuyên hiển thị trong tác phẩm của ông. Nhân vật chính thường xuyên bị giết, các sự kiện được nhìn nhận dưới nhiều góc nhìn khác nhau, kể cả qua cái nhìn của các nhân vật phản diện, điều này khiến độc giả không thể nghiêng về các nhân vật “anh hùng” như các cuốn tiểu thuyết thông thường khác ; đồng thời cũng khẳng định thêm sự thật rằng những nhân vật anh hùng không thể đi qua các biến cố mà không bị tổn thương, mất mát giống như trong đời thực. Chính vì vậy, Trò chơi vương quyền nhận được vô số những lời khen ngợi về chủ nghĩa hiện thực. Đồng thời bộ tiểu thuyết cũng nhận được những bình luận quan trọng về vai trò của phụ nữ và tôn giáo được thể hiện trong tác phẩm.<br>
+				Tác giả George RR Martin là tác giả khoa học viễn tưởng và nhà biên kịch thành công ở Hollywood. Tuy nhiên, chính việc thường xuyên phải cắt giảm nhân vật và những cảnh chiến đấu trong các kịch bản của mình vì những hạn chế liên quan đến ngân sách và độ dài các tập phim; đã khiến ông quyết định quay lại với niềm đam mê viết lách, nơi trí tưởng tượng phong phú của ông không bị hạn chế bởi bất cứ điều gì và tạo nên bộ tiểu thuyết giả tưởng bán chạy nổi tiếng Trò chơi vương quyền.
+				Mời bạn đón đọc.</p>
+			</div>
+
+			<div class="gach"></div>
+
+			<div class="dschuong">
+				<div class="dschuong-title">
+					<h4>Danh sách chương</h4>					
+				</div>
+				<div class="dschuong-chap">
+					<ul>
+						<li>
+							<div class="chap"><a href="read.html">Chương 0</a></div>
+							<div class="timechap">01/01/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 1</a></div>
+							<div class="timechap">08/01/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 3</a></div>
+							<div class="timechap">15/01/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 3</a></div>
+							<div class="timechap">22/01/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 4</a></div>
+							<div class="timechap">29/01/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 5</a></div>
+							<div class="timechap">06/02/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 6</a></div>
+							<div class="timechap">13/02/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 7</a></div>
+							<div class="timechap">20/02/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 8</a></div>
+							<div class="timechap">27/02/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 9</a></div>
+							<div class="timechap">04/03/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 10</a></div>
+							<div class="timechap">11/03/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 11</a></div>
+							<div class="timechap">18/03/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 12</a></div>
+							<div class="timechap">25/03/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 13</a></div>
+							<div class="timechap">2/04/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 14</a></div>
+							<div class="timechap">9/04/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 15 chương 1</a></div>
+							<div class="timechap">16/04/2020</div>
+						</li>
+						<li>
+							<div class="chap"><a href="read.html">Chương 15 chương 2</a></div>
+							<div class="timechap">17/04/2020</div>
+						</li>
+					</ul>
+				</div>
+				<div class="chuong-plus">
+					<button>Xem thêm</button>
+				</div>
+			</div>
+
+			<div class="gach"></div>
+
+			<div class="tuongtu">
+				<div class="tuongtu-title">
+					<h4>Sách cùng thể loại</h4>
+				</div>
+				<div class="tuongtu-book">
+					<div class="tuongtu1">
+						<div class="sachtu">
+							<a href="book.html">
+							<img src="../photo/book/3-tw.jpg" alt="the witcher">
+							<h4>The Witcher</h4></a>
+							<p>Chương 7</p>
+						</div>
+						<div class="sachtu">
+							<a href="book.html">
+							<img src="../photo/book/3-hp.jpg" alt="harry potter">
+							<h4>Harry Potter</h4></a>
+							<p>Chương 17</p>
+						</div>
+						<div class="sachtu">
+							<a href="book.html">
+							<img src="../photo/book/3-tqdn.jpg" alt="tam quốc diễn nghĩa">
+							<h4>Tam quốc diễn nghĩa</h4></a>
+							<p>Chương 120</p>
+						</div>
+						<div class="sachtu">
+							<a href="book.html">
+							<img src="../photo/book/3-aot32.jpg" alt="Attack on Titan">
+							<h4>Attack on Titan</h4></a>
+							<p>Chương 32</p>
+						</div>
+						<div class="sachtu">
+							<a href="book.html">
+							<img src="../photo/book/3-ky.jpg" alt="kimetsu yaiba">
+							<h4>Kimetsu Yaiba</h4></a>
+							<p>Chương 205</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="binhluan">
+				<div class="binhluan-title">
+					<h4>Bình luận sách</h4>
+				</div>
+				<div class="binhluan-main">
+					<div class="dembinhluan">
+						<h4>9 Bình luận</h4>
+					</div>
+					<div class="binhluan-me">
+						<div class="bl0">
+							<div class="avt">
+								<img src="../photo/comment/avt.jpg">
+							</div>
+							<div class="cmt">
+								<textarea placeholder="Nhập bình luận..." class="nhap" rows="3" cols="110"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="binhluan-mb">
+						<div class="bl">
+							<div class="avt">
+								<img src="../photo/comment/db.jpg"  style="width: 50px;">
+							</div>
+							<div class="cmt">
+								<a href="#"><h4>Đăng Bảo</h4></a>
+								<p>Bộ này hay quá!</p>
+							</div>
+							<div class="tuongtac">
+								<a href="#">Like</a>
+								<span>..</span>
+								<a href="#">Reply</a>
+								<span>..</span>
+								<span>1h</span>
+							</div>
+						</div>
+						<div class="bl">
+							<div class="avt">
+								<img src="../photo/comment/sh.jpg"  style="width: 50px;">
+							</div>
+							<div class="cmt">
+								<a href="#"><h4>Sỹ Hiệp</h4></a>
+								<p>Xuất sắc...</p>
+							</div>
+							<div class="tuongtac">
+								<a href="#">Like</a>
+								<span>..</span>
+								<a href="#">Reply</a>
+								<span>..</span>
+								<span>1h</span>
+							</div>
+						</div>
+						<div class="bl">
+							<div class="avt">
+								<img src="../photo/comment/np.jpg"  style="width: 50px; height: 50px">
+							</div>
+							<div class="cmt">
+								<a href="#"><h4>Nguyên Phúc</h4></a>
+								<p>Quá hay và ý nghĩa <3</p>
+							</div>
+							<div class="tuongtac">
+								<a href="#">Like</a>
+								<span>..</span>
+								<a href="#">Reply</a>
+								<span>..</span>
+								<span>1h</span>
+							</div>
+						</div>
+						<div class="bl" style="height: 80px;">
+							<div class="avt">
+								<img src="../photo/comment/vh.jpg"  style="width: 50px;">
+							</div>
+							<div class="cmt">
+									<a href="#"><h4>Văn Hưng</h4></a>
+									<p style="margin-bottom: 3px;">Cuối cùng ai làm vua vậy?</p>							
+								<div class="tuongtac">
+									<a href="#">Like</a>
+									<span>..</span>
+									<a href="#">Reply</a>
+									<span>..</span>
+									<span>1h</span>
+								</div>
+							</div>
+						</div>
+						<div class="rep">
+							<div style="height: 80px;">
+							<div class="avt">
+								<img src="../photo/comment/dh.jpg">
+							</div>
+							<div class="cmt">
+									<a href="#"><h4>Đức Hoan</h4></a>
+									<p>Brandon nhé bạn</p>							
+								<div class="tuongtac">
+									<a href="#">Like</a>
+									<span>..</span>
+									<a href="#">Reply</a>
+									<span>..</span>
+									<span>1h</span>
+								</div>
+							</div>
+							</div>
+							<div>
+							<div class="avt">
+								<img src="../photo/comment/db.jpg">
+							</div>
+							<div class="cmt">
+									<a href="#"><h4>Đăng Bảo</h4></a>
+									<p>Trong sách chưa biết</p>							
+								<div class="tuongtac">
+									<a href="#">Like</a>
+									<span>..</span>
+									<a href="#">Reply</a>
+									<span>..</span>
+									<span>1s</span>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+					<div class="fb">
+						<button>Xem thêm 3 bình luận</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="seen-full">
+			<div class="tik"></div>
+			<div class="seen-title">
+				<h3>SÁCH ĐÃ XEM</h3>
+			</div>
+			<div class="seen-book">					
+				<div class="book-s">
+					<!-- <p>Bạn chưa xem quyển sách nào...</p> -->
+				</div>
+				<div class="book-xem">
+					<a href="book.html">
+					<img src="../photo/book/3-got1.jpg" alt="game of thrones">
+					<h4>Game of Thrones</h4></a>
+					<p>Tiến trình : 1/38</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="like-full">
+			<div class="tok"></div>
+			<div class="like-title">
+				<h3>SÁCH YÊU THÍCH</h3>
+			</div>
+			<div class="like-book">
+				<div class="book-l">
+					<p>Bạn chưa thích quyển sách nào...</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="sp">
+		<div class="sp-text">
+			<div class="sp-logo"><a href="#" class="logo-sup"><img src="../photo/logo/1-cover.png" alt="hbbook"></a></div>
+			<div class="sp-tittle">
+				<p>Đọc sách online, sách full, sách hay. Website luôn cập nhật những bộ sách mới thuộc các thể loại đặc sắc như tiểu thuyết, truyện ngắn, hay sách văn học một cách nhanh nhất.</p> 
+			</div>
+		</div>
+	</div>
+
+	<a href="#" id="gotop"><i class="fa fa-arrow-up"></i></a>
+	<script>
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("gotop").style.display = "block";
+			} else {
+				document.getElementById("gotop").style.display = "none";
+			}
+		}
+		document.getElementById('gotop').addEventListener("click", function(){
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		});
+	</script>
+</body>
+
+</html>
